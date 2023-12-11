@@ -1,11 +1,15 @@
-import { StyleSheet, Text, View, TextInput } from 'react-native'
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const Login = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Admin Login</Text>
-            <TextInput style={styles.inputStyle} />
+            <TextInput style={styles.inputStyle} placeholder='Enter Email Id' />
+            <TextInput style={styles.inputStyle} placeholder='Enter Password' />
+            <TouchableOpacity style={styles.loginbtn}>
+                <Text style={styles.btnText}>Login</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -33,7 +37,7 @@ const styles = StyleSheet.create({
         width: '90%'
     },
     loginbtn:{
-        backgroundColor: 'deepskublue',
+        backgroundColor: 'deepskyblue',
         height:50,
         alignSelf:'center',
         marginTop: 50,
@@ -41,5 +45,10 @@ const styles = StyleSheet.create({
         width: '90%',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    btnText:{
+        fontSize: 16,
+        fontWeight: '600',
+        color: 'black'
     }
 })
